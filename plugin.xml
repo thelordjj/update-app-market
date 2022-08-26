@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-market-update" version="1.0.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>AppMarketUpdate</name>
+    <keywords>phonegap,cordova,native</keywords>
+
+
+
+	<js-module name="AppMarketUpdate" src="www/AppMarketUpdate.js">
+		<clobbers target="cordova.plugins.AppMarketUpdate" />
+	</js-module>
+
+	<platform name="android">
+
+      <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+
+    <!--<framework src="com.google.android.play:app-update:2.0.0" />-->
+	<!--<framework src="com.google.android.material:material:1.6.1" />-->
+	<!--<framework src="androidx.constraintlayout:constraintlayout:2.1.4" />-->
+	<!--<framework src="androidx.appcompat:appcompat:1.5.0" />-->
+
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="AppMarketUpdate">
+				<param name="android-package" value="cordova.plugin.market.update.AppMarketUpdate" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<source-file src="src/android/AppMarketUpdate.java" target-dir="src/cordova/plugin/market/update/AppMarketUpdate" />
+	</platform>
+
+</plugin>

@@ -1,0 +1,32 @@
+{
+  "name": "cordova-plugin-market-update",
+  "version": "1.0.0",
+  "description": "Actualizar app desde el market",
+  "cordova": {
+    "id": "cordova-plugin-market-update",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova",
+    "native"
+  ],
+  "author": "jcastillo",
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thelordjj/cordova-plugin-market-update.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thelordjj/cordova-plugin-market-update/issues"
+  },
+  "homepage": "https://github.com/thelordjj/cordova-plugin-market-update#readme"
+}
