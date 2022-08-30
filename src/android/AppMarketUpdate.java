@@ -23,7 +23,7 @@ import com.google.android.gms.tasks.Task;
 
 /*import android.view.View;
 import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity; /*
+import androidx.appcompat.app.AppCompatActivity; */
 
 import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
