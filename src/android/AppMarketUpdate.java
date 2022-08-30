@@ -202,9 +202,9 @@ public class AppMarketUpdate extends CordovaPlugin {
                                                               this.cordova.getActivity(),
                                                               REQUEST_CODE_UPDATE);
 
-                    if (vUpdateType == AppUpdateType.FLEXIBLE){
+                   /* if (vUpdateType == AppUpdateType.FLEXIBLE){
                         ListenerFlexible();
-                    }
+                    } */
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
