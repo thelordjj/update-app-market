@@ -21,9 +21,9 @@ import com.google.android.play.core.install.model.InstallStatus;
 import com.google.android.play.core.install.model.UpdateAvailability;
 import com.google.android.gms.tasks.Task;
 
-import android.view.View;
+/*import android.view.View;
 import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity; /*
 
 import static android.app.Activity.RESULT_CANCELED;
 import static android.app.Activity.RESULT_OK;
@@ -89,10 +89,8 @@ public class AppMarketUpdate extends CordovaPlugin {
 
      private void checkUpdate(CallbackContext callbackContext) {
         try{
-
         // Returns an intent object that you use to check for an update.
         Task<AppUpdateInfo> appUpdateInfoTask = appUpdateManager.getAppUpdateInfo();
-             
          // Checks whether the platform allows the specified type of update,
         // and current version staleness.
             appUpdateInfoTask.addOnSuccessListener(appUpdateInfo -> {
@@ -114,13 +112,13 @@ public class AppMarketUpdate extends CordovaPlugin {
                         callUpdate(appUpdateInfo, AppUpdateType.IMMEDIATE);
                     }
                 }
-                if (updateType == AppUpdateType.FLEXIBLE)  {
+              /*  if (updateType == AppUpdateType.FLEXIBLE)  {
                     if (appUpdateInfo.isUpdateTypeAllowed(AppUpdateType.FLEXIBLE)){
                          callUpdate(appUpdateInfo, AppUpdateType.FLEXIBLE);
                     }
-                }
+                } */
     }
-
+     /*
     private void ListenerFlexible(){
         // Create a listener to track request state updates.
         InstallStateUpdatedListener listener = state -> {
@@ -142,9 +140,9 @@ public class AppMarketUpdate extends CordovaPlugin {
         };
         // Before starting an update, register a listener for updates.
         appUpdateManager.registerListener(listener);
-    }
+    } */
 
-    private void popupSnackbarForCompleteUpdate() {
+  /*  private void popupSnackbarForCompleteUpdate() {
         View layoutSnackbar = this.cordova.getActivity().findViewById(android.R.id.content);
         Snackbar snackbar = Snackbar.make(layoutSnackbar,
                                           "Se ha completado la descarga",
@@ -153,7 +151,7 @@ public class AppMarketUpdate extends CordovaPlugin {
         );
        //snackbar.setActionTextColor(getResources().getColor(R.color.teal_700));
         snackbar.show();
-    }
+    } */
    
     /*
     @Override
@@ -179,12 +177,12 @@ public class AppMarketUpdate extends CordovaPlugin {
     }
 
     private boolean checkResume(AppUpdateInfo appUpdateInfo){
-        if (updateType == AppUpdateType.FLEXIBLE) { 
+       /* if (updateType == AppUpdateType.FLEXIBLE) { 
             if (appUpdateInfo.installStatus() == InstallStatus.DOWNLOADED) {
                 popupSnackbarForCompleteUpdate();
                 return false;
             } 
-        }
+        } */
         if (updateType == AppUpdateType.IMMEDIATE) {
                  if (appUpdateInfo.updateAvailability() == UpdateAvailability.DEVELOPER_TRIGGERED_UPDATE_IN_PROGRESS) {                            
                      callUpdate(appUpdateInfo, AppUpdateType.IMMEDIATE);
@@ -202,9 +200,9 @@ public class AppMarketUpdate extends CordovaPlugin {
                                                               this.cordova.getActivity(),
                                                               REQUEST_CODE_UPDATE);
 
-                    if (vUpdateType == AppUpdateType.FLEXIBLE){
+                   /* if (vUpdateType == AppUpdateType.FLEXIBLE){
                         ListenerFlexible();
-                    }
+                    } */
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
