@@ -154,12 +154,13 @@ public class AppMarketUpdate extends CordovaPlugin {
        //snackbar.setActionTextColor(getResources().getColor(R.color.teal_700));
         snackbar.show();
     }
-
+   
+    /*
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
         cordova.setActivityResultCallback(this);
-    }
+    }*/
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
@@ -195,6 +196,7 @@ public class AppMarketUpdate extends CordovaPlugin {
 
     private void callUpdate(AppUpdateInfo appUpdateInfo, int vUpdateType){
                 try {
+                    this.cordova.setActivityResultCallback(this);
                     appUpdateManager.startUpdateFlowForResult(appUpdateInfo,
                                                               vUpdateType,
                                                               this.cordova.getActivity(),
