@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-market-update",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Actualizar app desde el market",
   "cordova": {
     "id": "cordova-plugin-market-update",
